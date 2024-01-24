@@ -1,15 +1,27 @@
 import Link from "next/link";
+import { useState } from "react";
 import Logo from "../../public/logo.svg";
 import {
   linkStyle,
   listStyle,
+  navLinkSideBar,
   navLinkStyle,
+  navLinkWrapper,
   navListWrapper,
   navStyle,
 } from "./styles/nav.style";
 import Button from "./button";
+import Menu from "./menu";
 
 export default function Nav() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  
+  const menuClickHandler = () => setIsMenuOpen((prev) => !prev);
+  const buttonClickHandler = () => {
+    isMenuOpen && menuClickHandler();
+  }
+  
+  const navLinksStyle = isMenuOpen ? navLinkSideBar : navLinkWrapper;
   const navlinks = [
     {
       name: 'About',
@@ -39,16 +51,26 @@ export default function Nav() {
         />
       </Link>
       <div className={navListWrapper}>
-        <ol className={navLinkStyle}>
-          {navlinks.map(({name, url}, index) => {
-            return (
-              <li key={index} className={listStyle}>
-                <Link href={url} className={linkStyle}>{name}</Link>
-              </li>
-            )
-          })}
-        </ol>
-        <Button>Resume</Button>
+        <div className={navLinksStyle}>
+          <ol className={navLinkStyle}>
+            {navlinks.map(({name, url}, index) => {
+              return (
+                <li key={index} className={listStyle}>
+                  <Link
+                    href={url}
+                    onClick={menuClickHandler}
+                    className={linkStyle}
+                  >{name}</Link>
+                </li>
+              )
+            })}
+          </ol>
+          <Button onClick={buttonClickHandler}>Resume</Button>
+        </div>
+        <Menu
+          isOpen={isMenuOpen}
+          onClick={menuClickHandler}
+        />
       </div>
     </div>
   )
