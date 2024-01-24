@@ -32,24 +32,10 @@ const linkStyle = `
   before:text-xs
 `;
 
-const resumeButtonStyle = `
-  text-green
-  bg-transparent
-  font-normal
-  border-solid
-  border
-  border-green
-  rounded
-  px-3
-  py-1.5
-  ml-4
-`;
-
 export {
   navStyle,
   navListWrapper,
   navLinkStyle,
   listStyle,
   linkStyle,
-  resumeButtonStyle
 };

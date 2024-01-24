@@ -6,8 +6,8 @@ import {
   navLinkStyle,
   navListWrapper,
   navStyle,
-  resumeButtonStyle
 } from "./styles/nav.style";
+import Button from "./button";
 
 export default function Nav() {
   const navlinks = [
@@ -48,7 +48,7 @@ export default function Nav() {
             )
           })}
         </ol>
-        <button className={resumeButtonStyle}>Resume</button>
+        <Button>Resume</Button>
       </div>
     </div>
   )
