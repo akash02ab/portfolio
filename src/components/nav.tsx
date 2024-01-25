@@ -78,7 +78,7 @@ export default function Nav() {
                 <li key={index} className={listStyle}>
                   <Link
                     href={url}
-                    onClick={menuClickHandler}
+                    onClick={() => setIsMenuOpen(false)}
                     className={linkStyle}
                   >{name}</Link>
                 </li>
