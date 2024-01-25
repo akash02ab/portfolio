@@ -24,7 +24,7 @@ export default function Nav() {
     isMenuOpen && menuClickHandler();
   }
 
-  useClickAway(wrapperRef, menuClickHandler)
+  useClickAway(wrapperRef, () => setIsMenuOpen(false));
 
   const onWindowResize = (event: Event) => {
     const target = event.currentTarget as Window
