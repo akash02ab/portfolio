@@ -71,7 +71,7 @@ export default function Nav() {
         />
       </Link>
       <div ref={wrapperRef} className={navListWrapper}>
-        <div  className={navLinksStyle}>
+        <div className={navLinksStyle}>
           <ol className={navLinkStyle}>
             {navlinks.map(({name, url}, index) => {
               return (
