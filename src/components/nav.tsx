@@ -12,6 +12,7 @@ import {
 } from "./styles/nav.style";
 import Button from "./button";
 import Menu from "./menu";
+import Overlay from "./overlay";
 
 export default function Nav() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -72,6 +73,7 @@ export default function Nav() {
           onClick={menuClickHandler}
         />
       </div>
+      {isMenuOpen && <Overlay />}
     </div>
   )
 }
