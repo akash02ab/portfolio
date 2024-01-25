@@ -29,7 +29,7 @@ export default function Nav() {
   const onWindowResize = (event: Event) => {
     const target = event.currentTarget as Window
     const windowSize = target.innerWidth;
-    if (windowSize > 768) menuClickHandler();
+    if (windowSize > 768) setIsMenuOpen(false);
   }
 
   useEffect(() => {
