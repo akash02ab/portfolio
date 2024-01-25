@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import useClickAway from "@/hooks/useClickAway";
 import Logo from "../../public/logo.svg";
 import {
   linkStyle,
@@ -16,11 +17,29 @@ import Overlay from "./overlay";
 
 export default function Nav() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const wrapperRef = useRef(null);
   
   const menuClickHandler = () => setIsMenuOpen((prev) => !prev);
   const buttonClickHandler = () => {
     isMenuOpen && menuClickHandler();
   }
+
+  useClickAway(wrapperRef, menuClickHandler)
+
+  const onWindowResize = (event: Event) => {
+    const target = event.currentTarget as Window
+    const windowSize = target.innerWidth;
+    if (windowSize > 768) menuClickHandler();
+  }
+
+  useEffect(() => {
+    window.addEventListener("resize", onWindowResize);
+
+    return () => {
+      window.removeEventListener("resize", onWindowResize);
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
   
   const navLinksStyle = isMenuOpen ? navLinkSideBar : navLinkWrapper;
   const navlinks = [
@@ -51,8 +70,8 @@ export default function Nav() {
           height="40"
         />
       </Link>
-      <div className={navListWrapper}>
-        <div className={navLinksStyle}>
+      <div ref={wrapperRef} className={navListWrapper}>
+        <div  className={navLinksStyle}>
           <ol className={navLinkStyle}>
             {navlinks.map(({name, url}, index) => {
               return (
