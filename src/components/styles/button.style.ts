@@ -8,8 +8,6 @@ const buttonStyle = `
   border-green
   rounded
   relative
-  px-3
-  py-1.5
   z-[1]
 
   after:content-['']
