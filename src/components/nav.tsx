@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import useClickAway from "@/hooks/useClickAway";
 import Logo from "../../public/logo.svg";
 import {
+  buttonWrapper,
   linkStyle,
   listStyle,
   logoStyle,
@@ -86,7 +87,9 @@ export default function Nav() {
               )
             })}
           </ol>
-          <Button onClick={buttonClickHandler}>Resume</Button>
+          <div className={buttonWrapper}>
+            <Button onClick={buttonClickHandler}>Resume</Button>
+          </div>
         </div>
         <Menu
           isOpen={isMenuOpen}

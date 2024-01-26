@@ -76,6 +76,10 @@ const linkStyle = `
   items-center
 `;
 
+const buttonWrapper = `
+  md:ml-4
+`;
+
 export {
   logoStyle,
   navStyle,
@@ -85,4 +89,5 @@ export {
   navLinkStyle,
   listStyle,
   linkStyle,
+  buttonWrapper,
 };

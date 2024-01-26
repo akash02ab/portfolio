@@ -10,7 +10,6 @@ const buttonStyle = `
   relative
   px-3
   py-1.5
-  ml-4
   z-[1]
 
   after:content-['']
