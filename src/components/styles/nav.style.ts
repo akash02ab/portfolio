@@ -1,3 +1,8 @@
+const logoStyle = `
+  fill-green
+  cursor-pointer
+`;
+
 const navStyle = `
   flex
   justify-between
@@ -72,6 +77,7 @@ const linkStyle = `
 `;
 
 export {
+  logoStyle,
   navStyle,
   navListWrapper,
   navLinkWrapper,

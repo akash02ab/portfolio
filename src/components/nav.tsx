@@ -5,6 +5,7 @@ import Logo from "../../public/logo.svg";
 import {
   linkStyle,
   listStyle,
+  logoStyle,
   navLinkSideBar,
   navLinkStyle,
   navLinkWrapper,
@@ -65,7 +66,7 @@ export default function Nav() {
     <div className={navStyle}>
       <Link href="/">
         <Logo
-          className="fill-green cursor-pointer"
+          className={logoStyle}
           width="60"
           height="40"
         />
