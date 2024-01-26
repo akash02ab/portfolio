@@ -6,8 +6,8 @@ export default function Overlay() {
     left-0
     w-screen
     h-screen
-    backdrop-blur
-    z-[0]
+    backdrop-blur-sm
+    z-[2]
   `;
 
   return (
