@@ -25,7 +25,10 @@ const indexStyle = `
 `;
 
 const decorationStyle = `
-  w-72
+  w-32
+  xs:w-40
+  sm:w-56
+  md:w-72
   h-px
   ml-5
   bg-light-slate
