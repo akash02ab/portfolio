@@ -9,6 +9,8 @@ const buttonStyle = `
   rounded
   relative
   z-[1]
+  px-4
+  py-2
 
   after:content-['']
   after:absolute
