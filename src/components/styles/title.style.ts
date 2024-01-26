@@ -8,8 +8,9 @@ const titleWrapper = `
 
 const titleStyle = `
   text-white
-  text-2xl
-  md:text-4xl
+  text-xl
+  md:text-2xl
+  lg:text-4xl
   font-bold
 `;
 
@@ -18,17 +19,19 @@ const indexStyle = `
   -bottom-0.5
   mr-2.5
   text-green
-  text-base
+  text-xs
+  xs:text-base
   sm:text-lg
   md:text-xl
   font-normal
 `;
 
 const decorationStyle = `
-  w-32
-  xs:w-40
+  w-0
+  xs:w-32
   sm:w-56
-  md:w-72
+  md:w-64
+  lg:w-72
   h-px
   ml-5
   bg-light-slate
