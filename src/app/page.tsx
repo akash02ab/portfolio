@@ -1,8 +1,9 @@
 "use client"
+import Nav from "@/components/nav";
 import About from "@/components/sections/about";
 import Jobs from "@/components/sections/jobs";
 import Hero from "@/components/sections/hero";
-import Nav from "@/components/nav";
+import Contact from "@/components/sections/contact";
 import HyperLink from "@/components/hyperlink";
 
 export default function Home() {
@@ -40,6 +41,7 @@ export default function Home() {
         <Hero />
         <About />
         <Jobs />
+        <Contact />
       </div>
       <footer className={footerStyle}>
         <p>Build with Next.js, Tailwind &amp; Typescript</p>
