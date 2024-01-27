@@ -1,6 +1,9 @@
 "use client"
+import About from "@/components/sections/about";
+import Jobs from "@/components/sections/jobs";
 import Hero from "@/components/sections/hero";
-import Nav from "../components/nav";
+import Nav from "@/components/nav";
+import HyperLink from "@/components/hyperlink";
 
 export default function Home() {
   const containerStyle = `
@@ -8,7 +11,7 @@ export default function Home() {
     2xl:px-12
     lg:px-10
     xxs:px-6
-    h-dvh
+    min-h-screen
   `;
 
   const sectionWrapper = `
@@ -16,6 +19,18 @@ export default function Home() {
     xs:px-6
     sm:px-10
     md:px-24
+    my-16
+    flex
+    flex-col
+    items-center
+    gap-36
+  `;
+
+  const footerStyle = `
+    text-light-slate
+    text-sm
+    text-center
+    py-8
   `;
   
   return (
@@ -23,7 +38,19 @@ export default function Home() {
       <Nav />
       <div className={sectionWrapper}>
         <Hero />
+        <About />
+        <Jobs />
       </div>
+      <footer className={footerStyle}>
+        <p>Build with Next.js, Tailwind &amp; Typescript</p>
+        <HyperLink
+          href="https://github.com/akash02ab/portfolio"
+          target="_blank"
+          rel="noreferrer"
+        >
+          View repository @GitHub
+        </HyperLink>
+      </footer>
     </main>
   );
 }
