@@ -8,7 +8,7 @@ import {
 
 interface Props {
   children: ReactNode
-  index: string
+  index?: string
 };
 
 export default function Title({ children, index }: Props) {
