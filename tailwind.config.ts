@@ -17,7 +17,7 @@ const config: Config = {
       'dark-slate': '#495670',
       'slate': '#8892b0',
       'light-slate': '#a8b2d1',
-      'lightest-slate': '#ccd6ff6',
+      'lightest-slate': '#ccd6ff',
       'white': '#e6f1ff',
       'green': '#64ffda',
       'green-tint': '#64ffda1a',
