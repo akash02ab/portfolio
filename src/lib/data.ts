@@ -57,15 +57,15 @@ const rawJobData = [
 const projectData = [
   {
     "title": "Everyone Answers",
-    "description": "Develop an app for live online classes, enabling teachers to quickly gather responses from students. Teachers can create sessions, add students, and share a unique link. When students provide answers through the portal, the responses instantly appear on the teacher's dashboard.",
-    "tech_stack": ["React", "Redux", "Firebase", "Material UI"],
+    "description": "An app for live online classes, enabling teachers to quickly gather responses from students. Teachers can create sessions, add students, and share a unique link. When students provide answers through the portal, the responses instantly appear on the teacher's dashboard.",
+    "tech_stack": ["React", "Redux", "Firebase", "Material-UI"],
     "github": "https://github.com/akash02ab/everyone-answers",
     "url": "https://everyone-answers.netlify.app/"
   },
   {
     "title": "Movies Hub",
     "description": "A movie website showcasing the latest releases with detailed information including plot summaries, genres, and links to trailers.",
-    "tech_stack": ["React", "TMDB API", "CSS"],
+    "tech_stack": ["React", "TMDB-API", "CSS"],
     "github": "https://github.com/akash02ab/movies-website",
     "url": "https://the-movies-hub.netlify.app/"
   },
@@ -78,15 +78,15 @@ const projectData = [
   },
   {
     "title": "Quiz App",
-    "description": "Create a basic quiz app where users can answer multiple-choice questions. The app displays their progress, showing the current score, as well as the minimum and maximum possible scores at any moment.",
-    "tech_stack": ["React", "Bootstrap", "Styled Components", "Jest"],
+    "description": "A basic quiz app where users can answer multiple-choice questions. The app displays their progress, showing the current score, as well as the minimum and maximum possible scores at any moment.",
+    "tech_stack": ["React", "Bootstrap", "Jest"],
     "github": "https://github.com/akash02ab/outlier-quiz-challenge",
     "url": "https://quiz-app-by-akash.netlify.app/"
   },
   {
     "title": "Crypto Trading Simulator",
     "description": "A Crypto Trading Simulator using CoinGecko API. Users can buy/sell coins and track their transaction history within the platform.",
-    "tech_stack": ["React", "CoinGecko API", "CSS"],
+    "tech_stack": ["React", "CoinGecko-API", "CSS"],
     "github": "https://github.com/akash02ab/crypto-trading-platform",
     "url": "https://crypto-trading-simulation.netlify.app/"
   },
@@ -100,7 +100,7 @@ const projectData = [
   {
     "title": "Pexels Curated",
     "description": "Search any image from Pexels API",
-    "tech_stack": ["React", "Pexels API", "CSS"],
+    "tech_stack": ["React", "Pexels-API", "CSS"],
     "github": "https://github.com/akash02ab/pexels-image-search",
     "url": "https://pexels-curated.netlify.app/"
   },
@@ -113,7 +113,7 @@ const projectData = [
   },
   {
     "title": "Trello Board",
-    "description": "Build a basic version of a Trello board. It has three boards: Todo, Doing, and Done. Users can easily move their tasks between these boards using drag-and-drop",
+    "description": "A basic version of a Trello board. It has three boards: Todo, Doing, and Done. Users can easily move their tasks between these boards using drag-and-drop",
     "tech_stack": ["HTML", "CSS", "Javascript"],
     "github": "https://github.com/akash02ab/trello-layout",
     "url": "https://noob-trello-board.netlify.app/"
