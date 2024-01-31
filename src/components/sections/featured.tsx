@@ -5,10 +5,45 @@ import { featuredData } from "@/lib/data";
 import Title from "../title";
 import Github from "../../../public/github.svg";
 import External from "../../../public/external.svg";
-import { descriptionStyle, featureContainer, featureContent, featuredWrapper, imageStyle, imageWrapper, labelStyle, linkStyle, linkWrapper, techStyle, techWrapper, titleStyle } from "../styles/featured.style";
+import {
+  descriptionStyle,
+  featureContainer,
+  featureContent_E,
+  featureContent_O,
+  featuredWrapper,
+  imageStyle,
+  imageWrapper_E,
+  imageWrapper_O,
+  labelStyle,
+  linkStyle,
+  linkWrapper_E,
+  linkWrapper_O,
+  techStyle_E,
+  techStyle_O,
+  techWrapper_E,
+  techWrapper_O,
+  titleStyle
+} from "../styles/featured.style";
 
 export default function Featured() {
   const [featured, setFeatured] = useState(featuredData);
+  
+  const getFeaturedStyle = (index:number) => {
+    const isEven = index % 2 === 0;
+    return isEven ? [
+      featureContent_E,
+      imageWrapper_E,
+      linkWrapper_E,
+      techStyle_E,
+      techWrapper_E
+    ] : [
+      featureContent_O,
+      imageWrapper_O,
+      linkWrapper_O,
+      techStyle_O,
+      techWrapper_O
+    ];
+  };
   return (
     <section id="projects" className="max-w-5xl">
       <Title index="03">Some Things I’ve Built</Title>
@@ -16,6 +51,15 @@ export default function Featured() {
       <div className={featuredWrapper}>
         {
           featured.map((feature, index) => {
+            
+            const [
+              featureContent,
+              imageWrapper,
+              linkWrapper,
+              techStyle,
+              techWrapper
+            ] = getFeaturedStyle(index);
+
             return (
               <div key={index} className={featureContainer}>
                 <div className={featureContent}>
