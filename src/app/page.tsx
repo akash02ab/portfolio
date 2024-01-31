@@ -3,6 +3,7 @@ import Nav from "@/components/nav";
 import About from "@/components/sections/about";
 import Jobs from "@/components/sections/jobs";
 import Hero from "@/components/sections/hero";
+import Featured from "@/components/sections/featured";
 import Projects from "@/components/sections/projects";
 import Contact from "@/components/sections/contact";
 import HyperLink from "@/components/hyperlink";
@@ -42,6 +43,7 @@ export default function Home() {
         <Hero />
         <About />
         <Jobs />
+        <Featured />
         <Projects />
         <Contact />
       </div>
