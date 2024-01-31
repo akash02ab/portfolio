@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import useClickAway from "@/hooks/useClickAway";
 import Logo from "../../public/logo.svg";
@@ -65,24 +64,24 @@ export default function Nav() {
 
   return (
     <div className={navStyle}>
-      <Link href="/">
+      <a href="/">
         <Logo
           className={logoStyle}
           width="60"
           height="40"
         />
-      </Link>
+      </a>
       <div ref={wrapperRef} className={navListWrapper}>
         <div className={navLinksStyle}>
           <ol className={navLinkStyle}>
             {navlinks.map(({name, url}, index) => {
               return (
                 <li key={index} className={listStyle}>
-                  <Link
+                  <a
                     href={url}
                     onClick={() => setIsMenuOpen(false)}
                     className={linkStyle}
-                  >{name}</Link>
+                  >{name}</a>
                 </li>
               )
             })}
