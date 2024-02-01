@@ -57,11 +57,11 @@ const rawJobData = [
 const featuredData = [
   {
     "title": "Spotify Profile View",
-    "description": "A web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more.",
+    "description": "A web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. View artist and track details, existing playlists and more.",
     "tech_stack": ["React", "Styled-Component", "Spotify-API"],
     "github": "https://github.com/akash02ab/spotify-profile-view",
     "url": "https://spotify-profile-views.netlify.app/",
-    "img": "/spotify-profile-home.jpg"
+    "img": "/spotify-profile-home.png"
   },
 ];
 
