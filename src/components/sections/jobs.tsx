@@ -48,7 +48,7 @@ export default function Jobs() {
         </div>
         <div>
           <h3 className={titleStyle}>
-            <span className="text-white">{activePanel.title}</span>
+            <span className="text-lightest-slate">{activePanel.title}</span>
             <span className="text-green">&nbsp;@&nbsp;</span>
             <HyperLink
               href={activePanel.url}
