@@ -65,7 +65,7 @@ export default function Featured() {
                 <div className={featureContent}>
                   <span>
                     <h6 className={labelStyle}>Featured Project</h6>
-                    <h2 className={titleStyle}>{feature.title}</h2>
+                    <a className={titleStyle} href={feature.url} target="_blank">{feature.title}</a>
                   </span>
                   <p className={descriptionStyle}>{feature.description}</p>
                   <ul className={techWrapper}>
