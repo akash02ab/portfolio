@@ -16,7 +16,7 @@ export default function Contact() {
             href="https://www.upwork.com/freelancers/~01a88d2143d5968304"
             target="_blank"
             rel="noreferrer">
-            Say Hello!
+            Say Hello
           </a>
         </Button>
       </div>
