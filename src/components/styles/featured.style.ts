@@ -22,6 +22,8 @@ const featureContent_E = `
   md:col-end-10
   lg:col-end-8
   row-span-full
+  p-6
+  md:p-0
   z-[2]
 `;
 
@@ -35,6 +37,8 @@ const featureContent_O = `
   lg:col-start-6
   md:text-right
   row-span-full
+  p-6
+  md:p-0
   z-[2]
 `;
 
