@@ -8,6 +8,7 @@ import Projects from "@/components/sections/projects";
 import Contact from "@/components/sections/contact";
 import HyperLink from "@/components/hyperlink";
 import Email from "@/components/email";
+import Social from "@/components/social";
 
 export default function Home() {
   const containerStyle = `
@@ -49,6 +50,8 @@ export default function Home() {
         <Contact />
       </div>
       <footer className={footerStyle}>
+        <Email />
+        <Social />
         <p>Build with Next.js, Tailwind &amp; Typescript</p>
         <HyperLink
           href="https://github.com/akash02ab/portfolio"
@@ -57,7 +60,6 @@ export default function Home() {
         >
           View repository @GitHub
         </HyperLink>
-        <Email />
       </footer>
     </main>
   );
