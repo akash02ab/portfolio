@@ -30,8 +30,7 @@ const motoStyle = `
 `;
 
 const aboutStyle = `
-  text-xs
-  sm:text-sm
+  text-sm
   md:text-base
   lg:text-lg
   text-light-slate

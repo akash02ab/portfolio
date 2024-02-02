@@ -60,8 +60,7 @@ const imageStyle = `
 
 const textStyle = `
   text-slate
-  text-xs
-  sm:text-sm
+  text-sm
   md:text-base
   lg:text-lg
 `;
