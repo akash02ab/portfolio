@@ -22,6 +22,7 @@ export default function Nav() {
   
   const menuClickHandler = () => setIsMenuOpen((prev) => !prev);
   const buttonClickHandler = () => {
+    window.open("https://github.com/akash02ab")
     isMenuOpen && menuClickHandler();
   }
 
@@ -87,7 +88,7 @@ export default function Nav() {
             })}
           </ol>
           <div className={buttonWrapper}>
-            <Button onClick={buttonClickHandler}>Resume</Button>
+            <Button onClick={buttonClickHandler}>GitHub</Button>
           </div>
         </div>
         <Menu
