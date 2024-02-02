@@ -6,6 +6,10 @@
   .counter-increment {
     counter-increment: item 1;
   }
+
+  .vertical-rl {
+    writing-mode: vertical-rl;
+  }
 }
 
 :root {

@@ -7,6 +7,7 @@ import Featured from "@/components/sections/featured";
 import Projects from "@/components/sections/projects";
 import Contact from "@/components/sections/contact";
 import HyperLink from "@/components/hyperlink";
+import Email from "@/components/email";
 
 export default function Home() {
   const containerStyle = `
@@ -56,6 +57,7 @@ export default function Home() {
         >
           View repository @GitHub
         </HyperLink>
+        <Email />
       </footer>
     </main>
   );
