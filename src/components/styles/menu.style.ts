@@ -5,6 +5,7 @@ const menuWrapper = `
   relative
   cursor-pointer
   md:hidden
+  animate-drop
 `;
 
 const menuStyle = `

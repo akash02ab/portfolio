@@ -29,6 +29,21 @@ const config: Config = {
         xxs: '320px',
         xs: '480px',
         ...defaultTheme.screens,
+      },
+      keyframes: {
+        drop: {
+          'from': {
+            opacity: '0',
+            transform: 'translateY(-50px)'
+          },
+          'to': {
+            opacity: '0.8',
+            transform: 'translate(0px)'
+          }
+        }
+      },
+      animation: {
+        'drop': 'drop 1s ease backwards'
       }
     },
   },
