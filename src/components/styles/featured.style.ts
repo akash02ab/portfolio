@@ -49,7 +49,8 @@ const labelStyle = `
 
 const titleStyle = `
   text-lg
-  md:text-xl
+  sm:text-xl
+  md:text-2xl
   font-bold
   text-lightest-slate
   hover:text-green
@@ -58,7 +59,8 @@ const titleStyle = `
 
 const descriptionStyle = `
   text-xs
-  md:text-sm
+  sm:text-sm
+  md:text-base
   text-light-slate
   bg-light-navy
   p-6
@@ -160,7 +162,7 @@ const imageStyle = `
   duration-100
 `;
 
-export {
+const style = {
   featuredWrapper,
   featureContainer,
   featureContent_E,
@@ -179,3 +181,5 @@ export {
   imageWrapper_O,
   imageStyle
 };
+
+export default style;

@@ -21,8 +21,7 @@ const nameStyle = `
 const motoStyle = `
   text-3xl
   sm:text-4xl
-  md:text-6xl
-  lg:text-7xl
+  md:text-5xl
   font-bold  
   text-slate
   mb-5

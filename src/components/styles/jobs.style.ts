@@ -41,6 +41,7 @@ const activeTabStyle = `
   font-bold
   text-green
   text-xs
+  sm:text-sm
   bg-light-navy
   max-md:border-b-2
   md:border-l-2

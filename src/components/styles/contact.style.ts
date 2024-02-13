@@ -9,6 +9,8 @@ const contactWrapper = `
 
 const availStyle = `
   text-sm
+  md:text-base
+  lg:text-lg
   text-center
   text-slate
 `;
