@@ -56,6 +56,17 @@ const rawJobData = [
 
 const featuredData = [
   {
+    "title": "Octo Profile",
+    "description": "A nicer look to your GitHub Profile with charts!",
+    "tech_stack": ["Next.js", "TypeScript", "TailwindCSS", "Chart.js", "GitHub-API"],
+    "github": "https://github.com/akash02ab/octo-profile",
+    "url": "https://octo-profile.netlify.app/",
+    "img": "/octo-profile.png"
+  },
+];
+
+const projectData = [
+  {
     "title": "Spotify Profile View",
     "description": "A web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. View artist and track details, existing playlists and more.",
     "tech_stack": ["React", "Styled-Component", "Spotify-API"],
@@ -63,9 +74,6 @@ const featuredData = [
     "url": "https://spotify-profile-views.netlify.app/",
     "img": "/spotify-profile-home.png"
   },
-];
-
-const projectData = [
   {
     "title": "Everyone Answers",
     "description": "An app for live online classes, enabling teachers to quickly gather responses from students. Teachers can create sessions, add students, and share a unique link. When students provide answers through the portal, the responses instantly appear on the teacher's dashboard.",
