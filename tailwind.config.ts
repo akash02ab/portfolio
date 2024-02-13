@@ -40,10 +40,25 @@ const config: Config = {
             opacity: '0.8',
             transform: 'translate(0px)'
           }
+        },
+        jump: {
+          '0%': {
+            transform: 'translateY(-200px)'
+          },
+          '50%': {
+            transform: 'translateY(0px)'
+          },
+          '80%': {
+            transform: 'translateY(-20px)'
+          },
+          '100%': {
+            transform: 'translateY(0px)'
+          }
         }
       },
       animation: {
-        'drop': 'drop 1s ease backwards'
+        'drop': 'drop 1s ease backwards',
+        'jump': 'jump 1s ease-in forwards'
       }
     },
   },

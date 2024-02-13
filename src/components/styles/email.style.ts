@@ -10,7 +10,7 @@ const emailWrapper = `
   md:flex-col
   md:items-center
   md:gap-5
-
+  animate-jump
   after:inline-block
   after:content-['']
   after:w-px

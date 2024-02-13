@@ -14,7 +14,7 @@ const socialWrapper = `
   md:fixed
   md:flex-col
   lg:left-6
-
+  animate-jump
   after:hidden
   after:md:inline-block
   after:content-['']
