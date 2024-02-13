@@ -54,11 +54,22 @@ const config: Config = {
           '100%': {
             transform: 'translateY(0px)'
           }
+        },
+        appear: {
+          'from': {
+            opacity: '0',
+            transform: 'translateY(100px)'
+          },
+          'to': {
+            opacity: '1',
+            transform: 'translateY(0px)'
+          }
         }
       },
       animation: {
         'drop': 'drop 1s ease backwards',
-        'jump': 'jump 1s ease-in forwards'
+        'jump': 'jump 1s ease-in forwards',
+        'appear': 'appear 2s ease forwards'
       }
     },
   },

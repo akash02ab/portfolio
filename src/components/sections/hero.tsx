@@ -32,7 +32,7 @@ export default function Hero() {
   const items = [greetings, name, moto, about, profileLink];
 
   return (
-    <section id="hero" className="max-w-5xl">
+    <section id="hero" className="max-w-5xl animate-appear">
       {
         items.map((item, index) => <div key={index}>{item}</div>)
       }
