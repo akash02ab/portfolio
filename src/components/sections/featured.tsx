@@ -5,25 +5,7 @@ import { featuredData } from "@/lib/data";
 import Title from "../title";
 import Github from "../../../public/github.svg";
 import External from "../../../public/external.svg";
-import {
-  descriptionStyle,
-  featureContainer,
-  featureContent_E,
-  featureContent_O,
-  featuredWrapper,
-  imageStyle,
-  imageWrapper_E,
-  imageWrapper_O,
-  labelStyle,
-  linkStyle,
-  linkWrapper_E,
-  linkWrapper_O,
-  techStyle_E,
-  techStyle_O,
-  techWrapper_E,
-  techWrapper_O,
-  titleStyle
-} from "../styles/featured.style";
+import style from "../styles/featured.style";
 
 export default function Featured() {
   const [featured, setFeatured] = useState(featuredData);
@@ -31,24 +13,24 @@ export default function Featured() {
   const getFeaturedStyle = (index:number) => {
     const isEven = index % 2 === 0;
     return isEven ? [
-      featureContent_E,
-      imageWrapper_E,
-      linkWrapper_E,
-      techStyle_E,
-      techWrapper_E
+      style.featureContent_E,
+      style.imageWrapper_E,
+      style.linkWrapper_E,
+      style.techStyle_E,
+      style.techWrapper_E
     ] : [
-      featureContent_O,
-      imageWrapper_O,
-      linkWrapper_O,
-      techStyle_O,
-      techWrapper_O
+      style.featureContent_O,
+      style.imageWrapper_O,
+      style.linkWrapper_O,
+      style.techStyle_O,
+      style.techWrapper_O
     ];
   };
   return (
     <section id="projects" className="max-w-5xl">
       <Title index="03">Some Things I’ve Built</Title>
 
-      <div className={featuredWrapper}>
+      <div className={style.featuredWrapper}>
         {
           featured.map((feature, index) => {
             
@@ -61,13 +43,13 @@ export default function Featured() {
             ] = getFeaturedStyle(index);
 
             return (
-              <div key={index} className={featureContainer}>
+              <div key={index} className={style.featureContainer}>
                 <div className={featureContent}>
                   <span>
-                    <h6 className={labelStyle}>Featured Project</h6>
-                    <a className={titleStyle} href={feature.url} target="_blank">{feature.title}</a>
+                    <h6 className={style.labelStyle}>Featured Project</h6>
+                    <a className={style.titleStyle} href={feature.url} target="_blank">{feature.title}</a>
                   </span>
-                  <p className={descriptionStyle}>{feature.description}</p>
+                  <p className={style.descriptionStyle}>{feature.description}</p>
                   <ul className={techWrapper}>
                     {
                       feature.tech_stack.map((tech, index) => (
@@ -80,14 +62,14 @@ export default function Featured() {
                       <Github
                         width="20"
                         height="20"
-                        className={linkStyle}
+                        className={style.linkStyle}
                       />
                     </Link>
                     <Link href={feature.url} target="_blank">
                       <External
                         width="22"
                         height="22"
-                        className={linkStyle}
+                        className={style.linkStyle}
                       />
                     </Link>
                   </span>
@@ -98,7 +80,7 @@ export default function Featured() {
                     width={500}
                     height={500}
                     alt={feature.title}
-                    className={imageStyle}
+                    className={style.imageStyle}
                   />
                 </div>
               </div>
