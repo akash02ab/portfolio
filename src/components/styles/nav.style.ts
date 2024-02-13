@@ -10,9 +10,6 @@ const navStyle = `
   items-center
   h-16
   md:h-24
-  transition-all
-  ease-in
-  duration-200
 `;
 
 const navScrollStyle = `
