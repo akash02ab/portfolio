@@ -10,8 +10,8 @@ import {
 export default function Hero() {
   const greetings = <h6 className={greetingStyle}>Hi, my name is</h6>;
   const name = <h1 className={nameStyle}>Akash Banchhor.</h1>;
-  const moto = <h1 className={motoStyle}>I build things for the web.</h1>;
-  const about = <p className={aboutStyle}>I&apos;m a frontend developer specializing in building exceptional digital experience. Currently, I&apos;m focused to work on a variety of project as an independent freelancer at {' '}
+  const moto = <h1 className={motoStyle}>I build digital dreams into reality.</h1>;
+  const about = <p className={aboutStyle}>I&apos;m a frontend developer specializing in building exceptional digital experiences. Currently, I&apos;m focused on working on a variety of projects as an independent freelancer at {' '}
     <HyperLink
       href="https://www.upwork.com/"
       target="_blank"
