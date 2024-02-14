@@ -23,6 +23,15 @@ const config: Config = {
       'green-tint': '#64ffda1a',
       'pink': '#f57dff',
       'blue': '#57cbff',
+      "vanilla-cream": "#eae7dc",
+      "desert-sand": "#d8c3a5",
+      "battleship-grey": "#3D3B40",
+      "light-battleship-grey": "#8e8d8a",
+      "salmon-red": "#e98074",
+      "coral-red": "#e85a4f",
+      "coral-red-tint": "#e85a4f5a",
+      "rich-black": "#222222",
+      "charcoal": "#333333"
     },
     extend: {
       screens: {
@@ -74,5 +83,6 @@ const config: Config = {
     },
   },
   plugins: [],
+  darkMode: 'class'
 };
 export default config;
