@@ -14,9 +14,9 @@ import {
   navScrollStyle,
   navStyle,
 } from "./styles/nav.style";
-import Button from "./button";
 import Menu from "./menu";
 import Overlay from "./overlay";
+import ThemeSwitcher from "./themeswitcher";
 
 export default function Nav() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -26,9 +26,6 @@ export default function Nav() {
   const wrapperRef = useRef(null);
   
   const menuClickHandler = () => setIsMenuOpen((prev) => !prev);
-  const buttonClickHandler = () => {
-    isMenuOpen && menuClickHandler();
-  }
 
   useClickAway(wrapperRef, () => setIsMenuOpen(false));
 
@@ -118,7 +115,7 @@ export default function Nav() {
             })}
           </ol>
           <div className={buttonWrapper} style={{animationDelay: '600ms'}}>
-            <Button onClick={buttonClickHandler}>Resume</Button>
+            <ThemeSwitcher />
           </div>
         </div>
         <Menu
