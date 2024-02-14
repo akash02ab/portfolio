@@ -6,8 +6,10 @@ export default function Overlay() {
     w-screen
     h-screen
     bg-gradient-to-r
-    from-green-tint
-    to-green
+    dark:from-green-tint
+    dark:to-green
+    from-coral-red-tint
+    to-salmon-red
     backdrop-blur-sm
     z-[8]
   `;
