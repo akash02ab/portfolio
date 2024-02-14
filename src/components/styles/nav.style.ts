@@ -1,7 +1,9 @@
 const logoStyle = `
-  fill-green
+  dark:fill-green
+  fill-coral-red
   cursor-pointer
   animate-drop
+  hover:scale-110
 `;
 
 const navStyle = `
@@ -55,7 +57,8 @@ const navLinkSideBar = `
   h-screen
   z-[9]
   gap-y-5
-  bg-light-navy
+  dark:bg-light-navy
+  bg-desert-sand
   ease-in-out
   transition-all
   duration-150
@@ -81,16 +84,20 @@ const listStyle = `
 
 const linkStyle = `
   p-2.5
-  text-lightest-slate
-  hover:text-green
+  dark:text-lightest-slate
+  dark:hover:text-green
+  text-battleship-grey
+  hover:text-coral-red
   before:content-['0'counter(item)'.']
   before:mr-1
-  before:text-green
+  dark:before:text-green
+  before:text-coral-red
   before:text-xs
   flex
   flex-col
   md:flex-row
   items-center
+  hover:scale-110
   animate-drop
 `;
 

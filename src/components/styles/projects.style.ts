@@ -8,7 +8,8 @@ const sectionWrapper = `
 `;
 
 const titleStyle = `
-  text-lightest-slate
+  dark:text-lightest-slate
+  text-charcoal
   text-2xl
   md:text-3xl
   font-semibold
@@ -25,7 +26,8 @@ const projectContainer = `
   h-full
   p-6
   md:p-8
-  bg-light-navy
+  dark:bg-light-navy
+  bg-desert-sand
   shadow-2xl
   rounded
   flex
@@ -52,25 +54,31 @@ const linkWrapper = `
 `;
 
 const folderStyle = `
-  text-green
+  dark:text-green
+  text-coral-red
 `;
 
 const linkStyle = `
-  text-lightest-slate
-  hover:text-green
+  dark:text-lightest-slate
+  dark:hover:text-green
+  text-battleship-grey
+  hover:text-coral-red
 `;
 
 const headingStyle = `
-  text-lightest-slate
+  dark:text-lightest-slate
+  text-battleship-grey
   text-lg
   md:text-xl
   font-bold
   pb-1
-  group-hover:text-green
+  dark:group-hover:text-green
+  group-hover:text-coral-red
 `;
 
 const descriptionStyle = `
-  text-light-slate
+  dark:text-light-slate
+  text-battleship-grey
   text-xs
   md:text-sm
   pb-4
@@ -86,7 +94,8 @@ const footerStyle = `
 `;
 
 const techStyle = `
-  text-slate
+  dark:text-slate
+  text-light-battleship-grey
   text-xs
   font-normal
 `;

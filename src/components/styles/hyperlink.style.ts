@@ -1,5 +1,6 @@
 const hyperLinkStyle = `
-  text-green
+  dark:text-green
+  text-coral-red
   inline-block
   relative
   after:content=['']
@@ -8,7 +9,8 @@ const hyperLinkStyle = `
   after:absolute
   after:left-0
   after:bottom-0.5
-  after:bg-green
+  dark:after:bg-green
+  after:bg-coral-red
   after:opacity-50
   after:transition-all
   after:ease-in

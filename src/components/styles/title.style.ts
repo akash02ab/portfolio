@@ -7,7 +7,8 @@ const titleWrapper = `
 `;
 
 const titleStyle = `
-  text-white
+  dark:text-white
+  text-rich-black
   text-xl
   md:text-2xl
   lg:text-4xl
@@ -18,7 +19,8 @@ const indexStyle = `
   relative
   -bottom-0.5
   mr-2.5
-  text-green
+  dark:text-green
+  text-coral-red
   text-xs
   xs:text-base
   sm:text-lg
@@ -34,7 +36,8 @@ const decorationStyle = `
   lg:w-72
   h-px
   ml-5
-  bg-light-slate
+  dark:bg-light-slate
+  bg-battleship-grey
   opacity-20
 `;
 

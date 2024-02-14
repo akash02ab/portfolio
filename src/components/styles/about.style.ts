@@ -19,9 +19,11 @@ const figureStyle = `
   col-span-3
   md:self-start
   border-2
-  border-light-navy
+  dark:border-light-navy
+  border-salmon-red
   rounded
-  bg-green
+  dark:bg-green
+  bg-coral-red-tint
   relative
   z-[1]
   ease-in
@@ -35,7 +37,8 @@ const figureStyle = `
   before:w-full
   before:h-full
   before:border-solid
-  before:border-green
+  dark:before:border-green
+  before:border-coral-red
   before:border-2
   before:translate-x-3
   before:translate-y-3
@@ -59,7 +62,8 @@ const imageStyle = `
 `;
 
 const textStyle = `
-  text-slate
+  dark:text-slate
+  text-charcoal
   text-sm
   md:text-base
   lg:text-lg
@@ -72,7 +76,8 @@ const listWrapper = `
 `;
 
 const listStyle = `
-  text-slate
+  dark:text-slate
+  text-charcoal
   text-xs
   sm:text-sm
   pl-4
@@ -81,12 +86,14 @@ const listStyle = `
   before:absolute
   before:content-['▹']
   before:left-0
-  before:text-green
+  dark:before:text-green
+  before:text-coral-red
 `;
 
 const highlightedStyle = `
   text-bold
-  text-pink
+  dark:text-pink
+  text-blue
 `;
 
 

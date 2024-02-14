@@ -12,7 +12,8 @@ const availStyle = `
   md:text-base
   lg:text-lg
   text-center
-  text-slate
+  dark:text-slate
+  text-charcoal
 `;
 
 export {
