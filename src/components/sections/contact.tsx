@@ -1,12 +1,22 @@
+import { useEffect, useState } from "react";
+import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
+import Title from "../title";
 import Button from "../button";
 import { availStyle, contactWrapper } from "../styles/contact.style";
-import Title from "../title";
 
 export default function Contact() {
   const email = "akash02.ab@gmail.com";
+  const [sectionStyle, setSectionStyle] = useState('max-w-5xl invisible');
+  const { isIntersecting, ref } = useIntersectionObserver({ threshold: 0.01 });
+
+  useEffect(() => {
+    if (isIntersecting && !sectionStyle.includes('animate-appear')) {
+      setSectionStyle('max-w-5xl animate-appear');
+    }
+  }, [isIntersecting, sectionStyle]);
   
   return (
-    <section id="contact" className="max-w-5xl">
+    <section id="contact" ref={ref} className={sectionStyle}>
       <Title index="04">Get In Touch</Title>
       <div className={contactWrapper}>
         <p className={availStyle}>

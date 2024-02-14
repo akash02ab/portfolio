@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
 import { rawJobData } from "@/lib/data";
 import HyperLink from "../hyperlink";
 import Title from "../title";
@@ -22,12 +23,20 @@ interface DataT {
 }
 
 export default function Jobs() {
+  const [sectionStyle, setSectionStyle] = useState('max-w-5xl invisible');
+  const { isIntersecting, ref } = useIntersectionObserver({ threshold: 0.01 });
   const [jobs, setJobs] = useState(rawJobData);
   const [activeTab, setActiveTab] = useState(0);
   const activePanel = jobs[activeTab];
 
+  useEffect(() => {
+    if (isIntersecting && !sectionStyle.includes('animate-appear')) {
+      setSectionStyle('max-w-5xl animate-appear');
+    }
+  }, [isIntersecting, sectionStyle]);
+
   return (
-    <section id="jobs" className="max-w-5xl">
+    <section id="jobs" ref={ref} className={sectionStyle}>
       <Title index="02">Where I&apos;ve Worked</Title>
       <article className={jobSectionWrapper}>
         <div className={tabWrapper}>

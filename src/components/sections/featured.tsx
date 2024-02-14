@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
 import { featuredData } from "@/lib/data";
 import Title from "../title";
 import Github from "../../../public/github.svg";
@@ -8,6 +9,8 @@ import External from "../../../public/external.svg";
 import style from "../styles/featured.style";
 
 export default function Featured() {
+  const [sectionStyle, setSectionStyle] = useState('max-w-5xl invisible');
+  const { isIntersecting, ref } = useIntersectionObserver({ threshold: 0.01 });
   const [featured, setFeatured] = useState(featuredData);
   
   const getFeaturedStyle = (index:number) => {
@@ -26,8 +29,15 @@ export default function Featured() {
       style.techWrapper_O
     ];
   };
+
+  useEffect(() => {
+    if (isIntersecting && !sectionStyle.includes('animate-appear')) {
+      setSectionStyle('max-w-5xl animate-appear');
+    }
+  }, [isIntersecting, sectionStyle]);
+
   return (
-    <section id="projects" className="max-w-5xl">
+    <section id="projects" ref={ref} className={sectionStyle}>
       <Title index="03">Some Things I’ve Built</Title>
 
       <div className={style.featuredWrapper}>

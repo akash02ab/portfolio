@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { MouseEvent, useState } from "react";
+import { MouseEvent, useEffect, useState } from "react";
+import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
 import { projectData } from "@/lib/data";
 import Folder from "../../../public/folder.svg";
 import Github from "../../../public/github.svg";
@@ -22,6 +23,8 @@ import {
 
 export default function Projects() {
   const GRID_LIMIT = 6;
+  const [sectionStyle, setSectionStyle] = useState(sectionWrapper);
+  const { isIntersecting, ref } = useIntersectionObserver({ threshold: 0.01 });
   const [showMore, setShowMore] = useState(false);
   const [projects, setProjects] = useState(projectData);
   const firstSix = projects.slice(0, GRID_LIMIT);
@@ -35,8 +38,15 @@ export default function Projects() {
     window.open(link, "_blank");
   }
 
+  useEffect(() => {
+    if (isIntersecting && !sectionStyle.includes('animate-appear')) {
+      const newSectionStyle = sectionStyle.replace('invisible', '').trim();
+      setSectionStyle(newSectionStyle + ' animate-appear');
+    }
+  }, [isIntersecting, sectionStyle]);
+
   return (
-    <section className={sectionWrapper}>
+    <section ref={ref} className={sectionStyle}>
       <h2 className={titleStyle}>Other Noteworthy Projects</h2>
       <div className={projectsWrapper}>
         {projectsToShow.map((project, index) => {

@@ -1,13 +1,32 @@
 import Image from "next/image";
+import { useEffect, useState } from "react";
+import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
 import HyperLink from "../hyperlink";
 import Title from "../title";
-import { aboutWrapper, articleStyle, figureStyle, highlightedStyle, imageStyle, listStyle, listWrapper, textStyle } from "../styles/about.style";
+import {
+  aboutWrapper,
+  articleStyle,
+  figureStyle,
+  highlightedStyle,
+  imageStyle,
+  listStyle,
+  listWrapper,
+  textStyle
+} from "../styles/about.style";
 
 export default function About() {
+  const [sectionStyle, setSectionStyle] = useState('max-w-5xl invisible');
+  const { isIntersecting, ref } = useIntersectionObserver({ threshold: 0.01 }); 
   const techStack = ['JavaScript (ES6+)', 'React', 'Next.js', 'TypeScript', 'TailwindCSS', 'MaterialUI', 'Firebase', 'Git'];
 
+  useEffect(() => {
+    if (isIntersecting && !sectionStyle.includes('animate-appear')) {
+      setSectionStyle('max-w-5xl animate-appear');
+    }
+  }, [isIntersecting, sectionStyle]);
+
   return (
-    <section id="about" className="max-w-5xl">
+    <section id="about" ref={ref} className={sectionStyle}>
       <Title index="01">About Me</Title>
       <div className={aboutWrapper}>
         <article className={articleStyle}>
