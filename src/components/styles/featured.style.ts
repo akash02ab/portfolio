@@ -44,23 +44,30 @@ const featureContent_O = `
 
 const labelStyle = `
   text-sm
-  text-green
+  dark:text-green
+  text-coral-red
 `;
 
 const titleStyle = `
   text-lg
-  md:text-xl
+  sm:text-xl
+  md:text-2xl
   font-bold
-  text-lightest-slate
-  hover:text-green
+  dark:text-lightest-slate
+  dark:hover:text-green
+  text-charcoal
+  hover:text-coral-red
   cursor-pointer
 `;
 
 const descriptionStyle = `
   text-xs
-  md:text-sm
-  text-light-slate
-  bg-light-navy
+  sm:text-sm
+  md:text-base
+  dark:text-light-slate
+  dark:bg-light-navy
+  text-battleship-grey
+  bg-salmon-red
   p-6
   rounded-lg
   shadow-lg
@@ -78,14 +85,16 @@ const techWrapper_O = `
 `;
 
 const techStyle_E = `
-  text-light-slate
+  dark:text-light-slate
+  text-light-battleship-grey
   text-sm
   mr-5
   mb-1
 `;
 
 const techStyle_O = `
-  text-light-slate
+  dark:text-light-slate
+  text-light-battleship-grey
   text-sm
   md:ml-5
   mb-1
@@ -105,8 +114,10 @@ const linkWrapper_O = `
 `;
 
 const linkStyle = `
-  text-lightest-slate
-  hover:text-green
+  dark:text-lightest-slate
+  dark:hover:text-green
+  text-battleship-grey
+  hover:text-coral-red
 `;
 
 const imageWrapper_E = `
@@ -119,12 +130,14 @@ const imageWrapper_E = `
   lg:col-start-6
   row-span-full
   border-2
-  border-light-navy
+  dark:border-light-navy
+  border-salmon-red
   rounded
-  bg-green
+  dark:bg-green
+  bg-coral-red
   z-[1]
   opacity-10
-  md:opacity-50
+  md:opacity-70
   md:hover:opacity-100
  `;
 
@@ -138,12 +151,14 @@ const imageWrapper_O = `
   lg:col-end-8
   row-span-full
   border-2
-  border-light-navy
+  dark:border-light-navy
+  border-salmon-red
   rounded
-  bg-green
+  dark:bg-green
+  bg-coral-red
   z-[1]
   opacity-10
-  md:opacity-50
+  md:opacity-70
   md:hover:opacity-100
  `;
 
@@ -160,7 +175,7 @@ const imageStyle = `
   duration-100
 `;
 
-export {
+const style = {
   featuredWrapper,
   featureContainer,
   featureContent_E,
@@ -179,3 +194,5 @@ export {
   imageWrapper_O,
   imageStyle
 };
+
+export default style;

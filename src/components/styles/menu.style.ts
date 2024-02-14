@@ -5,11 +5,13 @@ const menuWrapper = `
   relative
   cursor-pointer
   md:hidden
+  animate-drop
 `;
 
 const menuStyle = `
   h-0.5
-  bg-green
+  dark:bg-green
+  bg-coral-red
   absolute
   inline-block
   transition-all

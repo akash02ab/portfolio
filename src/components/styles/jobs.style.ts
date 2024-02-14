@@ -24,13 +24,16 @@ const tabStyle = `
   min-w-fit
   px-4
   py-3
-  text-slate
+  dark:text-slate
+  text-charcoal
   text-xs
   max-md:border-b
   md:border-l
-  border-lightest-navy
+  dark:border-lightest-navy
+  border-salmon-red
   cursor-pointer
-  hover:bg-light-navy
+  dark:hover:bg-light-navy
+  hover:bg-desert-sand
 `;
 
 const activeTabStyle = `
@@ -39,14 +42,19 @@ const activeTabStyle = `
   px-4
   py-3
   font-bold
-  text-green
+  dark:text-green
+  text-battleship-grey
   text-xs
-  bg-light-navy
+  sm:text-sm
+  dark:bg-light-navy
+  bg-salmon-red
   max-md:border-b-2
   md:border-l-2
-  border-green
+  dark:border-green
+  border-coral-red
   cursor-pointer
-  hover:bg-light-navy
+  dark:hover:bg-light-navy
+  hover:coral-red
 `;
 
 const titleStyle = `
@@ -56,7 +64,8 @@ const titleStyle = `
 `;
 
 const rangeStyle = `
-  text-light-slate
+  dark:text-light-slate
+  text-light-battleship-grey
   text-xs
   mb-4
 `;
@@ -69,7 +78,8 @@ const controlWrapper = `
 `;
 
 const controlListStyle = `
-  text-slate
+  dark:text-slate
+  text-charcoal
   text-sm
   sm:text-base
   pl-4
@@ -78,7 +88,8 @@ const controlListStyle = `
   before:absolute
   before:content-['▹']
   before:left-0
-  before:text-green
+  dark:before:text-green
+  before:text-coral-red
 `;
 
 export {

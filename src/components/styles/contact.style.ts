@@ -9,8 +9,11 @@ const contactWrapper = `
 
 const availStyle = `
   text-sm
+  md:text-base
+  lg:text-lg
   text-center
-  text-slate
+  dark:text-slate
+  text-charcoal
 `;
 
 export {

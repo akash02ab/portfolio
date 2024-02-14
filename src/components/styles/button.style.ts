@@ -1,11 +1,13 @@
 const buttonStyle = `
-  text-green
+  dark:text-green
+  text-coral-red
   text-sm
   bg-transparent
   font-normal
   border-solid
   border
-  border-green
+  dark:border-green
+  border-coral-red
   rounded
   relative
   z-[1]
@@ -23,9 +25,11 @@ const buttonStyle = `
   after:duration-150
   after:ease-in-out
   after:-translate-x-1/2
-  after:bg-green
+  dark:after:bg-green
+  after:bg-coral-red
 
-  hover:text-dark-navy
+  dark:hover:text-dark-navy
+  hover:text-vanilla-cream
   hover:after:w-full
 `;
 
