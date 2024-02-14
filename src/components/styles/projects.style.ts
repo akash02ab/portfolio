@@ -4,6 +4,7 @@ const sectionWrapper = `
   gap-10
   items-center
   max-w-5xl
+  invisible
 `;
 
 const titleStyle = `
