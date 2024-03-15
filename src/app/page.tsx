@@ -42,7 +42,7 @@ export default function Home() {
   `;
   
   return (
-    <ThemeProvider attribute="class" defaultTheme="dark">
+    <ThemeProvider attribute="class" defaultTheme="light">
       <main className={containerStyle}>
         <Nav />
         <div className={sectionWrapper}>
