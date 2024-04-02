@@ -42,30 +42,30 @@ export default function Home() {
   `;
   
   return (
-    <ThemeProvider attribute="class" defaultTheme="dark">
-      <main className={containerStyle}>
-        <Nav />
-        <div className={sectionWrapper}>
-          <Hero />
-          <About />
-          <Jobs />
-          <Featured />
-          <Projects />
-          <Contact />
-        </div>
-        <footer className={footerStyle}>
-          <Email />
-          <Social />
-          <p>Build with Next.js, Tailwind &amp; Typescript</p>
-          <HyperLink
-            href="https://github.com/akash02ab/portfolio"
-            target="_blank"
-            rel="noreferrer"
-          >
-            View repository @GitHub
-          </HyperLink>
-        </footer>
-      </main>
-    </ThemeProvider>
-  );
+		<ThemeProvider attribute="class" defaultTheme="light">
+			<main className={containerStyle}>
+				<Nav />
+				<div className={sectionWrapper}>
+					<Hero />
+					<About />
+					<Jobs />
+					<Featured />
+					<Projects />
+					<Contact />
+				</div>
+				<footer className={footerStyle}>
+					<Email />
+					<Social />
+					<p>Build with Next.js, Tailwind &amp; Typescript</p>
+					<HyperLink
+						href="https://github.com/akash02ab/portfolio"
+						target="_blank"
+						rel="noreferrer"
+					>
+						View repository @GitHub
+					</HyperLink>
+				</footer>
+			</main>
+		</ThemeProvider>
+	);
 }
