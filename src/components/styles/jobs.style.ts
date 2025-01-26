@@ -2,7 +2,6 @@ const jobSectionWrapper = `
   flex
   flex-col
   md:flex-row
-  justify-between
   gap-8
   lg:gap-10
   xl:gap-16
@@ -38,7 +37,7 @@ const tabStyle = `
 
 const activeTabStyle = `
   w-full
-  min-w-fit
+  min-w-[211px]
   px-4
   py-3
   font-bold

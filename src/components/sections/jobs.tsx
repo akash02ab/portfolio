@@ -23,60 +23,57 @@ interface DataT {
 }
 
 export default function Jobs() {
-  const [sectionStyle, setSectionStyle] = useState('max-w-5xl invisible');
-  const { isIntersecting, ref } = useIntersectionObserver({ threshold: 0.01 });
-  const [jobs, setJobs] = useState(rawJobData);
-  const [activeTab, setActiveTab] = useState(0);
-  const activePanel = jobs[activeTab];
+  const [sectionStyle, setSectionStyle] = useState("max-w-5xl invisible");
+	const { isIntersecting, ref } = useIntersectionObserver({ threshold: 0.01 });
+	const [jobs, setJobs] = useState<DataT[]>(rawJobData);
+	const [activeTab, setActiveTab] = useState(0);
+	const activePanel = jobs[activeTab];
 
-  useEffect(() => {
-    if (isIntersecting && !sectionStyle.includes('animate-appear')) {
-      setSectionStyle('max-w-5xl animate-appear');
-    }
-  }, [isIntersecting, sectionStyle]);
+	useEffect(() => {
+		if (isIntersecting && !sectionStyle.includes("animate-appear")) {
+			setSectionStyle("max-w-5xl xl:min-w-[1024px] animate-appear");
+		}
+	}, [isIntersecting, sectionStyle]);
 
-  return (
-    <section id="jobs" ref={ref} className={sectionStyle}>
-      <Title index="02">Where I&apos;ve Worked</Title>
-      <article className={jobSectionWrapper}>
-        <div className={tabWrapper}>
-          {
-            jobs.map(({ company }: DataT, index: number) => {
-              const style = index === activeTab ? activeTabStyle : tabStyle;
-              return (
-                <button
-                  key={index}
-                  className={style}
-                  onClick={() => setActiveTab(index)}
-                >
-                  {company}
-                </button>
-              )
-            })
-          }
-        </div>
-        <div>
-          <h3 className={titleStyle}>
-            <span className="dark:text-lightest-slate text-charcoal">{activePanel.title}</span>
-            <span className="dark:text-green text-coral-red">&nbsp;@&nbsp;</span>
-            <HyperLink
-              href={activePanel.url}
-              target="_blank"
-              rel="noreferrer"
-            >
-              {activePanel.company}
-            </HyperLink>
-          </h3>
-          <p className={rangeStyle}>{activePanel.range}</p>
-          <ul className={controlWrapper}>
-            {
-              activePanel.control.map((ctrl: string, index: number) => (
-                <li key={index} className={controlListStyle}>{ctrl}</li>)
-              )
-            }
-          </ul>
-        </div>
-      </article>
-    </section>
-  )
+	return (
+		<section id='jobs' ref={ref} className={sectionStyle}>
+			<Title index='02'>Where I&apos;ve Worked</Title>
+			<article className={jobSectionWrapper}>
+				<div className={tabWrapper}>
+					{jobs.map(({ company }, index: number) => {
+						const style = index === activeTab ? activeTabStyle : tabStyle;
+						return (
+							<button
+								key={index}
+								className={style}
+								onClick={() => setActiveTab(index)}>
+								{company}
+							</button>
+						);
+					})}
+				</div>
+				<div>
+					<h3 className={titleStyle}>
+						<span className='dark:text-lightest-slate text-charcoal'>
+							{activePanel.title}
+						</span>
+						<span className='dark:text-green text-coral-red'>
+							&nbsp;@&nbsp;
+						</span>
+						<HyperLink href={activePanel.url} target='_blank' rel='noreferrer'>
+							{activePanel.company}
+						</HyperLink>
+					</h3>
+					<p className={rangeStyle}>{activePanel.range}</p>
+					<ul className={controlWrapper}>
+						{activePanel.control.map((ctrl: string, index: number) => (
+							<li key={index} className={controlListStyle}>
+								{ctrl}
+							</li>
+						))}
+					</ul>
+				</div>
+			</article>
+		</section>
+	);
 }
